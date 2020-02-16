@@ -1,31 +1,37 @@
 /* Tag styling */
 body {
-  background-color: #D4F3FD;
+  background-color: #eaf6f6;
 }
 h1 {
-  color: red;
+  color: #66bfbf;
 }
 h2 {
-  color: green;
+  color: #66bfbf;
+}
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  color: gray;
+  border-width: 5px;
+  width: 5%;
+}
+img {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
 }
 a {
-  color: orange;
+  color: black;
+}
+a:hover {
+  color: #66bfbf;
+}
+/* ---------- Class styling ---------- */
+.clearAll {
+  border-radius: 0%;
+}
+.specificWidth {
+  width: 100px;
 }
 
-/* Class styling */
-.bodyCustom {
-  background-color: orange;
-}
-
-.h2Blue {
-  color: blue;
-  font-size: xx-large;
-}
-
-/* Identification styling */
-#bodyContact {
-  background-color: #eee
-}
-#h2Hobby {
-  font-size: x-large;
-}
+/* ---------- Identification styling ---------- */
