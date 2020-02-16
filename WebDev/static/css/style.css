@@ -1,0 +1,31 @@
+/* Tag styling */
+body {
+  background-color: #D4F3FD;
+}
+h1 {
+  color: red;
+}
+h2 {
+  color: green;
+}
+a {
+  color: orange;
+}
+
+/* Class styling */
+.bodyCustom {
+  background-color: orange;
+}
+
+.h2Blue {
+  color: blue;
+  font-size: xx-large;
+}
+
+/* Identification styling */
+#bodyContact {
+  background-color: #eee
+}
+#h2Hobby {
+  font-size: x-large;
+}
