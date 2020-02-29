@@ -23,6 +23,7 @@ h1 {
   /* margin-left: 480px; */
 }
 
-span {
-  
+.light {
+  color: white;
+  text-align: center;
 }
