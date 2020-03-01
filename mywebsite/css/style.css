@@ -42,7 +42,6 @@ a {
   margin: 100px auto 100px auto;
   text-align: left;
   width: 50%;
-  position:
 }
 
 .pro {
@@ -78,4 +77,24 @@ a {
   float: right;
   margin-left: 30px;
   width: 25%;
+}
+
+.carousel-images {
+  background-color: transparent;
+  height:500px;
+  width: 100%;
+}
+
+.light {
+  color: white;
+  padding: 20px 0 20px 0;
+}
+
+.carousel-text {
+  background-color: black;
+}
+
+.card {
+  display: inline-block;
+  margin: 20px 5px 10px;
 }
