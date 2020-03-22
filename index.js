@@ -116,3 +116,15 @@
 
 // document.querySelector("h1");
 // $("h1");
+
+function anotherAddEventListener(typeOfEvent, callback) {
+    var calledFunction = {
+        typeOfEvent: "keypress",
+        key: "w",
+        durationOfPress: 2
+    }
+
+    if (calledFunction.typeOfEvent === "keypress") {
+        callback(calledFunction);
+    }
+}
