@@ -67,3 +67,52 @@
 // for (var i = 0; i<10; i++) {
 //     console.log(i);
 // }
+
+// var numberOfInstuments = document.querySelectorAll(".drum").length;
+// //var drumValues = document.querySelectorAll(".drum");
+// for(var i=0; i<numberOfInstuments; i++) {
+//   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+//     alert("I was pressed");
+//   });
+//  }
+
+//  var waiter1Name = "Ali";
+//  var waiter1Age = 20;
+//  var waiter1CanDoWork = ["CleanTable", "WashDishes"];
+
+// var waiter1 = {
+//     name: "Ali",
+//     age: 20,
+//     canDoWork: ["CleanTable", "WashDishes"]
+// }
+
+// function Waiter(name, age, canDoWork) {
+//     this.name = name,
+//     this.age = age,
+//     this.canDoWork = canDoWork,
+//     this.working = function () {
+//         alert("I am busy doing work.....");
+//     }
+// }
+
+// var waiter1 = new Waiter("Ahmad", 26, ["WashDishes"]);
+// var waiter2 = new Waiter("Owais", 18, ["CleanTable", "WashDishes"]);
+// var waiter3 = new Waiter("Fahad", 24, ["CleanTable", "WashDishes"]);
+// var waiter4 = new Waiter("Faysal", 32, ["CleanTable"]);
+
+// alert("My name is : " + waiter3.name);
+
+// debugger;
+// for (var i=0; i<document.querySelectorAll("button").length; i++) {
+//     document.querySelectorAll("button")[i].addEventListener("click", function () {
+//       document.querySelector("h1").style.color = "red";
+//     });
+// }
+
+// jQuery
+// $("button").click(function() {
+//     $("h1").css("color", "red");
+// })
+
+// document.querySelector("h1");
+// $("h1");
