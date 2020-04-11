@@ -59,9 +59,12 @@ app.listen(3000, function(req, res) {
   console.log("Server is running on port 3000.");
 });
 
+app.post("/failure", function(req, res) {
+  res.redirect("/");
+});
 
 // API key
-// c982d0bbef11a2879fe241e7de7309b4-us19
+// Use yourown API key.
 
 // List id
-// 4a59ec5636
+// Use yourown List id.
