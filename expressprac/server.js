@@ -1,9 +1,23 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.get("/", function(request, response) {
   // console.log(request);
-  response.send("<h1>Hello World</h1>");
+  // response.send("<h1>Hello World</h1>");
+  // console.log(__dirname);
+  response.sendFile(__dirname + "/index.html");
+});
+
+app.post("/", function (request, response) {
+  // console.log(request.body.num1);
+  var val1 = Number(request.body.num1);
+  var val2 = Number(request.body.num2);
+
+  var result = val1 + val2;
+  response.send("The sum is " + result);
 });
 
 app.get("/contact", (req, res) => {
