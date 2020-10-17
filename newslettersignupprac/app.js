@@ -11,13 +11,13 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  var firstName = req.body.fName;
-  var lastName = req.body.lName;
-  var email = req.body.email;
+  const firstName = req.body.fName;
+  const lastName = req.body.lName;
+  const email = req.body.email;
 
   // console.log(firstName, lastName, email);
 
-  var data = {
+  const data = {
     members: [
       {
         email_address: email,
@@ -29,9 +29,31 @@ app.post("/", function (req, res) {
       }
     ]
   };
-});
 
-// https://server.api.mailchimp.com/3.0/lists/4a59ec5636
+  const jsonData = JSON.stringify(data);
+
+  const url = "https://us19.api.mailchimp.com/3.0/lists/4a59ec5636";
+  const options = {
+    method: "POST",
+    auth: "jahanzeb1:c982d0bbef11a2879fe241e7de7309b4-us19"
+  }
+
+  const request = https.request(url, options, function (response) {
+    if (response.statusCode === 200) {
+      // res.send("You have successfully subscribed");
+      res.sendFile(__dirname + "/success.html")
+    } else {
+      // res.send("Something went wrong, please try again later.");
+      res.sendFile(__dirname + "/failure.html")
+    }
+    response.on("data", function(data) {
+      console.log(JSON.parse(data));
+    });
+  });
+
+  request.write(jsonData);
+  request.end();
+});
 
 app.listen(3000, function (){
   console.log("Server started on port 3000");
@@ -39,7 +61,7 @@ app.listen(3000, function (){
 
 
 // App key
-// cbfd185f38a9ec028d605a68205f68e9-us19
+// c982d0bbef11a2879fe241e7de7309b4-us19
 
 // List Id
 // 4a59ec5636
