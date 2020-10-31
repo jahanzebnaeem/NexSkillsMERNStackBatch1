@@ -1,0 +1,77 @@
+help
+show dbs
+use shopDB
+db
+
+db.products.insertOne({_id: 1, name: "Pen", price: 1.20})
+show collections
+db.products.insertOne({_id: 2, name: "Pencil", price: 0.80})
+
+db.products.find()
+db.products.find({name: "Pencil"})
+db.products.find({price: {$gt: 1}})
+db.products.find({_id: 1}, {name: 1}})
+db.products.find({_id: 1}, {name: 1, _id: 0}})
+
+db.products.updateOne({_id: 1}, {$set: {stock: 32}})
+db.products.updateOne({_id: 2}, {$set: {stock: 12}})
+
+db.products.deleteOne({_id: 2})
+
+db.products.insert(
+  {
+    _id: 3,
+    name: "Rubber",
+    price: 1.30,
+    stock: 43,
+    review: [
+      {
+        authorName: "Ali",
+        rating: 5,
+        review: "Best rubber ever!"
+      },
+      {
+        authorName: "Hayder",
+        rating: 5,
+        review: "Awesome rubber"
+      }
+    ]
+  }
+)
+db.products.insertOne(
+  {
+    _id: 2,
+    name: "Pencil",
+    price: 0.80,
+    stock: 12,
+    review: [
+      {
+        authorName: "Ali",
+        rating: 5,
+        review: "Fantastic"
+      },
+      {
+        authorName: "Hayder",
+        rating: 5,
+        review: "The best pencil I have ever used."
+      }
+    ]
+  }
+)
+
+{
+  _id: 1,
+  name: "Pen",
+  price: 1.20,
+  stock: 32
+}
+{
+  _id: 2,
+  name: "Pencil",
+  price: 0.80,
+  stock: 12
+}
+{
+  orderNumber: 3242,
+  productsOrdered: [1, 2]
+}
