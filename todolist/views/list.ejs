@@ -1,6 +1,6 @@
 <%- include("header") -%>
     <div class="box" id="heading">
-      <h1><%= displayDay %> ToDo List</h1>
+      <h1><%= listTitle %></h1>
     </div>
 
     <!-- < % if (displayDay === "Saturday" || displayDay === "Sunday") { %>
@@ -17,7 +17,7 @@
       <% } %>
       <form class="item" action="/" method="post">
         <input type="text" name="newList" placeholder="New Item" autocomplete="off">
-        <button type="submit" name="button">+</button>
+        <button type="submit" name="item" value=<%= listTitle %>>+</button>
       </form>
     </div>
     <%- include("footer") -%>
